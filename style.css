@@ -1,0 +1,73 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .tabs {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .tablinks {
+    background-color: #0099cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .tablinks:hover {
+    background-color: #0077b3;
+  }
+  
+  .tablinks.active {
+    background-color: #0077b3;
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+  }
+  
+  .tabcontent.active {
+    display: block;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    width: 60%;
+    margin-right: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #0099cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0077b3;
+  }
+  
+  #result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+  }
+  

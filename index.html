@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FactCheckUA</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <button class="tablinks active" onclick="openTab(event, 'main')">Головна</button>
+        <button class="tablinks" onclick="openTab(event, 'info')">Інформація</button>
+      </div>
+      <div id="main" class="tabcontent active">
+		<h1>FactCheckUA: Перевіряємо новини на достовірність разом!</h1>
+        <h3>За правду та достовірність інформації - разом до об'єктивності</h3>
+        <p>Введіть запит в поле нижче і натисніть кнопку:</p>
+        <form>
+          <input type="text" placeholder="Введіть запит" id="input">
+          <button type="submit" onclick="submitForm(event)">Пошук</button>
+        </form>
+        <div id="result">
+
+		</div>
+      </div>
+      <div id="info" class="tabcontent">
+        <h2>Інформація</h2>
+        <p>Тут буде розміщена корисна інформація для користувачів.</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
