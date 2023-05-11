@@ -17,11 +17,25 @@ function openTab(evt, tabName) {
 	evt.currentTarget.className += " active";
 }
 
+function validateInput(input) {
+	var regex = /^[a-zA-Zа-яА-ЯіїєІЇЄґҐ\s]+$/;
+	if (!regex.test(input)) {
+	  alert("Введені дані містять недопустимі символи. Будь ласка, введіть дані англійською або українською мовою.");
+	  return false;
+	}
+	return true;
+  }
+
 function submitForm(evt) {
+	
 	evt.preventDefault(); // Зупиняємо стандартну поведінку форми
 	let input = document.getElementById("input").value; // Отримуємо значення поля введення
 	let output = document.getElementById("result"); // Отримуємо елемент, де будемо відображати відповідь
 
+	var regex = /^[a-zA-Zа-яА-ЯіїєІЇЄґҐ0-9,.-:\s]+$/;
+	if (!regex.test(input)) {
+		return alert("Введені дані містять недопустимі символи. Будь ласка, введіть дані англійською або українською мовою.");
+	}
 	// Відправляємо запит на сервер
 	data = { data: input }
 	fetch('http://127.0.0.1:5000/bert', {
@@ -37,3 +51,5 @@ function submitForm(evt) {
 	  .catch(error => console.error(error));
 }
 
+
+	

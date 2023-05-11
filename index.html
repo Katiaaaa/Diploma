@@ -17,17 +17,67 @@
         <p>Введіть запит в поле нижче і натисніть кнопку:</p>
         <form>
           <input type="text" placeholder="Введіть запит" id="input">
-          <button type="submit" onclick="submitForm(event)">Пошук</button>
+          <button type="submit" onclick="submitForm(event)">Перевірити новину</button>
         </form>
         <div id="result">
 
 		</div>
       </div>
       <div id="info" class="tabcontent">
-        <h2>Інформація</h2>
-        <p>Тут буде розміщена корисна інформація для користувачів.</p>
+        
+		<div class="container">
+			<div class="row">
+			  <div class="col">
+				<h2>Інформація</h2>
+        		<p><i>Тут розміщена інформація, що стосується даних на яких тренувалась модель.</i></p>
+				<h4>Сайт перевірки новин стосується подій повязаних з війною в Україні. <br>Дані для дослідження взяті з 01.01.2022 по 01.04.2023</h4>
+
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col">
+				<img src="plots/plot_label_distribution.png" alt="plot_label_distribution">
+				<p>Графік розподілу міток</p>
+
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col">
+				<img src="plots/countnewsmonth.png" alt="countnewsmonth">
+				<p>Статистика кількості взятих даних за конкретний місяць</p>	
+				
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col">
+				<img src="plots/frequency_truenews.png" alt="frequency_truenews">
+				<p>Статистика найпоширеніших слів правдивих новин</p>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col">
+				<img src="plots/frequency_falsenews.png" alt="frequency_falsenews">
+				<p>Статистика найпоширеніших слів фейкових новин</p>
+				
+			  </div>
+			</div>
+			<div class="row">
+				<div class="col">
+				  <img src="plots/confusion_matrix.png" alt="confusion_matrix">
+				  <p>Матриця плутанини</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col">
+				  <img src="plots/predict74.png" alt="predict74">
+				  <p>Результати передбачень моделі на тестовому наборі даних</p>
+				</div>
+			  </div>
+		  </div>
+		  
       </div>
     </div>
     <script src="script.js"></script>
+	
   </body>
 </html>

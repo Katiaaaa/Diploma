@@ -1,10 +1,15 @@
 from flask import Flask, jsonify
 from flask_restful import Api, Resource, reqparse
+from googletrans import Translator
+import os
+
+
 
 from model import load_model
 
 app = Flask(__name__)
 api = Api(app)
+
 
 @app.after_request
 def add_cors_header(response):
@@ -19,9 +24,13 @@ parser.add_argument('data')
 # Define how the api will respond to the post requests
 class NewsClassifier(Resource):
     def post(self):
+        
+        translator = Translator()
+        
         args = parser.parse_args()
         msg = args['data']
-
+        msg = translator.translate(msg, dest='en').text
+        #print(msg)
         prediction = model.predict([msg])
         
         return prediction.tolist()
@@ -29,7 +38,8 @@ class NewsClassifier(Resource):
 api.add_resource(NewsClassifier, '/bert')
 
 if __name__ == '__main__':
+
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
     # Load model
     model = load_model()
-
     app.run(debug=True)

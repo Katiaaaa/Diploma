@@ -25,6 +25,7 @@
   
   .tablinks.active {
     background-color: #0077b3;
+    
   }
   
   .tabcontent {
@@ -37,6 +38,7 @@
   .tabcontent.active {
     display: block;
   }
+  
   
   form {
     margin-top: 20px;
@@ -70,4 +72,9 @@
     background-color: #f2f2f2;
     border: 1px solid #ccc;
   }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
   
