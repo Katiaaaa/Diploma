@@ -8,6 +8,11 @@ from model import load_model
 
 app = Flask(__name__)
 api = Api(app)
+model = load_model()
+conn = pyodbc.connect('Driver={SQL Server};'
+            'Server=DESKTOP-Q94UJ7E;'
+            'Database=news;'
+            'Trusted_Connection=yes;')
 
 
 @app.after_request
@@ -110,10 +115,6 @@ if __name__ == '__main__':
 
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
     # Load model
-    model = load_model()
-    conn = pyodbc.connect('Driver={SQL Server};'
-                'Server=DESKTOP-Q94UJ7E;'
-                'Database=news;'
-                'Trusted_Connection=yes;')
+
 
     app.run(debug=True)

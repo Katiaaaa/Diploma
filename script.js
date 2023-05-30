@@ -50,7 +50,7 @@ function submitForm(evt) {
 	let input = document.getElementById("input").value; // Отримуємо значення поля введення
 	let output = document.getElementById("result"); // Отримуємо елемент, де будемо відображати відповідь
 
-	var regex = /^[a-zA-Zа-яА-ЯіїєІЇЄґҐ0-9,.-:\s]+$/;
+	var regex = /^[a-zA-Zа-яА-ЯіїєІЇЄґҐ0-9.,\"'\- ()ʼ]+$/;
 	if (!regex.test(input)) {
 		return alert("Введені дані містять недопустимі символи. Будь ласка, введіть дані англійською або українською мовою.");
 	}

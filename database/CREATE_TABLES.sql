@@ -10,7 +10,7 @@ GO
 
 CREATE TABLE dbo.News(
     NewsId INT IDENTITY NOT NULL PRIMARY KEY, -- primary key column
-    [TextNews] TEXT NOT NULL,
+    [TextNews] NTEXT NOT NULL,
     [Date] DATE NOT NULL,
     [Time] TIME NOT NULL,
     [Label] BIT,

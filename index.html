@@ -16,15 +16,15 @@
         <h3>За правду та достовірність інформації - разом до об'єктивності</h3>
         <p>Введіть запит в поле нижче і натисніть кнопку:</p>
         <form>
-          <input type="text" placeholder="Введіть запит" id="input">
+          <input type="text" placeholder="Введіть запит" id="input" autocomplete="off">
           <button type="submit" onclick="submitForm(event)">Перевірити новину</button>
         </form>
         <div id="result"></div>
 		<div id="feetback" style="display: none;">
 			<form>
-				<input type="text" placeholder="Введіть і'мя" id="input1">
-				<input type="text" placeholder="Введіть пошту" id="input2">
-				<input type="text" placeholder="Введіть правдивіть новини" id="input3"><br>
+				<input type="text" placeholder="Введіть і'мя" id="input1" autocomplete="off" pattern="[a-zA-Zа-яА-ЯїЇєЄіІґҐ]+">
+				<input type="text" placeholder="Введіть пошту" id="input2" autocomplete="off ">
+				<input type="text" placeholder="Введіть правдивіть новини" id="input3" autocomplete="off"><br>
 				<button type="submit" onclick="feetbackForm(event)">Залишити відгук</button>
 			  </form>
 
