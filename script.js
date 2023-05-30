@@ -25,9 +25,27 @@ function validateInput(input) {
 	}
 	return true;
   }
-
-function submitForm(evt) {
+function feetbackForm(evt){
+	let name = document.getElementById("input1").value; // Отримуємо значення поля введення
+	let email = document.getElementById("input2").value;
+	let label = document.getElementById("input3").value;
+	let news = document.getElementById("input").value;
 	
+	data = {
+		name,
+		email,
+		news,
+		label
+	}
+	fetch('http://127.0.0.1:5000/save-news', {
+		method: 'POST',
+		body: JSON.stringify(data),
+		headers: { 'Content-Type': 'application/json' },
+	})
+}
+function submitForm(evt) {
+
+	document.getElementById("feetback").style.display = "block";
 	evt.preventDefault(); // Зупиняємо стандартну поведінку форми
 	let input = document.getElementById("input").value; // Отримуємо значення поля введення
 	let output = document.getElementById("result"); // Отримуємо елемент, де будемо відображати відповідь

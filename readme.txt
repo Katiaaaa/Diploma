@@ -11,4 +11,6 @@ python.exe -m pip install --upgrade pip
 Деактивуйте за допомогою deactivate
 
 WebSite.py = app.py
-FLASK_APP=WebSite.py
+FLASK_APP=app.py
+
+flask --app api.py run 
